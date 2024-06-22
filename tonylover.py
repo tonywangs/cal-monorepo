@@ -15,9 +15,7 @@ def extract_text_from_pdf(pdf_path):
             text += page.extract_text()
     return text
 
-# Load company policies from the PDF file
-
-
+# Load company policies from the PDF files
 pdf_path = 'data/data/national-guidelines-for-behavioral-health-crisis-care-02242020.pdf'
 company_policies = extract_text_from_pdf(pdf_path)
 
