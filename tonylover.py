@@ -1,10 +1,9 @@
 from flask import Flask, request, jsonify
 from PyPDF2 import PdfReader
 from langchain.chains import ConversationChain
-from langchain_openai import OpenAI  # Updated import
+from langchain.llms import OpenAI  # Correct import for OpenAI LLM
 
 app = Flask(__name__)
-
 
 def extract_text_from_pdf(pdf_path):
     with open(pdf_path, 'rb') as file:
@@ -15,8 +14,8 @@ def extract_text_from_pdf(pdf_path):
             text += page.extract_text()
     return text
 
-# Load company policies from the PDF files
-pdf_path = 'data/data/national-guidelines-for-behavioral-health-crisis-care-02242020.pdf'
+# Load company policies from the PDF fçile
+pdf_path = 'data/national-guidelines-for-behavioral-health-crisis-care-02242020.pdf'
 company_policies = extract_text_from_pdf(pdf_path)
 
 # Initialize LangChain components
@@ -30,10 +29,9 @@ def chat():
         return jsonify({'error': 'No message provided'}), 400
     
     # Generate response using LangChain
-    response = conversation.run(user_message, context=company_policies)
+    response = conversation.run(input=user_message, context=company_policies)
     
     return jsonify({'response': response})
-
 
 if __name__ == '__main__':
     app.run(debug=True)
