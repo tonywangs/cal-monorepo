@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from langchain.chains import ConversationChain
-from langchain.llms import OpenAI  # Correct import for OpenAI LLM
+from langchain_community.llms import OpenAI  # Correct import for OpenAI LLM
 
 app = Flask(__name__)
 
