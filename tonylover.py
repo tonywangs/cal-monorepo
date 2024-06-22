@@ -22,7 +22,7 @@ pdf_path = 'data/data/national-guidelines-for-behavioral-health-crisis-care-0224
 company_policies = extract_text_from_pdf(pdf_path)
 
 # Initialize LangChain components
-llm = OpenAI(api_key='YOUR_OPENAI_API_KEY')  # Replace with your OpenAI API key
+llm = OpenAI(api_key='sk-proj-azhfDUS19t7tBfeCIVWoT3BlbkFJ6Z5fQZXGy0lCquKpuZyk')  # Replace with your OpenAI API key
 conversation = ConversationChain(llm=llm)
 
 @app.route('/chat', methods=['POST'])
