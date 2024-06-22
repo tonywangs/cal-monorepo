@@ -18,7 +18,7 @@ def extract_text_from_pdf(pdf_path):
 # Load company policies from the PDF file
 
 
-pdf_path = 'data/company_policies.pdf'
+pdf_path = 'data/data/national-guidelines-for-behavioral-health-crisis-care-02242020.pdf'
 company_policies = extract_text_from_pdf(pdf_path)
 
 # Initialize LangChain components
