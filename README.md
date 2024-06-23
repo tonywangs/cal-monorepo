@@ -34,12 +34,13 @@ We developed NeuroSense using state-of-the-art natural language processing techn
 (3) Exploring partnerships with healthcare providers to integrate NeuroSense into existing support systems.
 
 ## Built With
-css3 
-flask
-html5
-javascript
-langchain
-open-ai
-pypdf
-python
-visual-studio
+
+- css3
+- flask
+- html5
+- javascript
+- langchain
+- open-ai
+- pypdf
+- python
+- visual-studio
