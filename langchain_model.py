@@ -20,7 +20,7 @@ max_advice_length = 1000  # Adjust this value based on your needs
 truncated_advice = mental_health_advice[:max_advice_length]
 
 # Initialize LangChain components
-llm = OpenAI(api_key='put key here')  # Replace with your OpenAI API key
+llm = OpenAI(api_key='sk-proj-FFvwtM4O2NT8WVUJk08qT3BlbkFJeCCglDYHFAry30qAZ6al')  # Replace with your OpenAI API key
 conversation = ConversationChain(llm=llm)
 
 @app.route('/chat', methods=['POST'])
